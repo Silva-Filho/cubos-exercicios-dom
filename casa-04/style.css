@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 5rem;
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+li + li {
+    margin-top: 1rem;
+}
+
+img {
+    margin-right: 1rem;
+    width: 3rem;
+    height: auto;
+    border-radius: 50%;
+}
+
+.nome {
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+    color: #444;
+}
