@@ -1,3 +1,11 @@
+:root {
+    --gray-100: #E1E1E6;
+    --gray-200: #d4d4d4;
+    --gray-300: #C4C4CC;
+    --gray-500: #444;
+    --gray-700: #29292E;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,15 +13,50 @@
 }
 
 html {
+    font-size: 62.5%;
     scroll-behavior: smooth;
 }
 
 body {
-    padding: 5rem;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 
+        'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--gray-300);
+}
+
+.container {
+    padding: 3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 5rem;
+    background-color: var(--gray-200);
+    border-radius: 20px;
 }
 
 h1 {
-    margin-bottom: 1rem;
+    font-size: 4rem;
 }
 
 li {
@@ -23,18 +66,24 @@ li {
 }
 
 li + li {
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 img {
-    margin-right: 1rem;
-    width: 3rem;
+    margin-right: 1.5rem;
+    width: 6rem;
     height: auto;
     border-radius: 50%;
 }
 
 .nome {
     margin-bottom: 0.25rem;
+    font-size: 2.4rem;
     font-weight: 600;
-    color: #444;
+    color: var(--gray-500);
+}
+
+.descricao {
+    font-size: 1.6rem;
+    color: var(--gray-700);
 }
