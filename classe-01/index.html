@@ -57,56 +57,38 @@
             foto: './assets/joao.jpg'
         }];
 
+        const nomeDiv = document.querySelector(".author__name");
+        const pDescricao = document.querySelector(".review-text");
+        const profissaoAutor = document.querySelector(".author__title");
+        const imgAutor = document.querySelector(".carousel__img");
+
+        function pegarInfosPessoa(pessoa) {
+            pDescricao.textContent = pessoa.descricao;
+            nomeDiv.textContent = pessoa.nome;
+            profissaoAutor.textContent = pessoa.profissao;
+            imgAutor.src = pessoa.foto;
+        }
+
         function pessoaAnterior() {
-            const nomeDiv = document.querySelector(".author__name");
             const nomeAutor = nomeDiv.textContent;
 
             if (nomeAutor === pessoas[0].nome) {
-                const pDescricao = document.querySelector(".review-text");
-                const profissaoAutor = document.querySelector(".author__title");
-                const imgAutor = document.querySelector(".carousel__img");
-
-                pDescricao.textContent = pessoas[1].descricao;
-                nomeDiv.textContent = pessoas[1].nome;
-                profissaoAutor.textContent = pessoas[1].profissao;
-                imgAutor.src = pessoas[1].foto;
+                pegarInfosPessoa(pessoas[1]);
                 /* imgAutor.setAttribute("src", pessoas[1].foto); */
             } else {
-                const pDescricao = document.querySelector(".review-text");
-                const profissaoAutor = document.querySelector(".author__title");
-                const imgAutor = document.querySelector(".carousel__img");
-
-                pDescricao.textContent = pessoas[0].descricao;
-                nomeDiv.textContent = pessoas[0].nome;
-                profissaoAutor.textContent = pessoas[0].profissao;
-                imgAutor.src = pessoas[0].foto;
+                pegarInfosPessoa(pessoas[0]);
                 /* imgAutor.setAttribute("src", pessoas[0].foto); */
             }
         };
 
         function proximaPessoa() {
-            const nomeDiv = document.querySelector(".author__name");
             const nomeAutor = nomeDiv.textContent;
 
             if (nomeAutor === pessoas[0].nome) {
-                const pDescricao = document.querySelector(".review-text");
-                const profissaoAutor = document.querySelector(".author__title");
-                const imgAutor = document.querySelector(".carousel__img");
-
-                pDescricao.textContent = pessoas[1].descricao;
-                nomeDiv.textContent = pessoas[1].nome;
-                profissaoAutor.textContent = pessoas[1].profissao;
-                imgAutor.src = pessoas[1].foto;
+                pegarInfosPessoa(pessoas[1]);
                 /* imgAutor.setAttribute("src", pessoas[1].foto); */
             } else {
-                const pDescricao = document.querySelector(".review-text");
-                const profissaoAutor = document.querySelector(".author__title");
-                const imgAutor = document.querySelector(".carousel__img");
-
-                pDescricao.textContent = pessoas[0].descricao;
-                nomeDiv.textContent = pessoas[0].nome;
-                profissaoAutor.textContent = pessoas[0].profissao;
-                imgAutor.src = pessoas[0].foto;
+                pegarInfosPessoa(pessoas[0]);
                 /* imgAutor.setAttribute("src", pessoas[0].foto); */
             }
         };
